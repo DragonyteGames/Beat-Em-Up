@@ -49,6 +49,10 @@ public class Enemy : MonoBehaviour
         }else if(health < 0)
         {
             enemyDead = true;
+            myAnim.SetBool("Fainted", true);
+            GetComponent<Collider2D>().enabled = false;
+            agent.enabled = false;
+            canvasObject.SetActive(false);
         }
         
        
@@ -91,11 +95,14 @@ public class Enemy : MonoBehaviour
     //public function to take damage on health based on player damage amount
     public void TakeDamage(float damageAmount)
     {
-        health -= damageAmount;
-        healthBar.UpdateHealth(health, maxHealth);
-        StartCoroutine ("GotHit");
-        textDamage.GetComponentInChildren<TextMeshProUGUI>().text = damageAmount.ToString();
-        (Instantiate (textDamage, new Vector3(damagePoint.position.x, damagePoint.position.y, damagePoint.position.z), Quaternion.identity) as GameObject).transform.parent = canvasObject.transform;
+        if(!enemyDead){
+            health -= damageAmount;
+            healthBar.UpdateHealth(health, maxHealth);
+            StartCoroutine ("GotHit");
+            textDamage.GetComponentInChildren<TextMeshProUGUI>().text = damageAmount.ToString();
+            (Instantiate (textDamage, new Vector3(damagePoint.position.x, damagePoint.position.y, damagePoint.position.z), Quaternion.identity) as GameObject).transform.parent = canvasObject.transform;
+        }
+
     }
 
     IEnumerator GotHit(){

@@ -65,10 +65,9 @@ public class CharacterScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D hitBox)
     {
-        damage = Mathf.Round(Random.Range(damageMin, damageMax));
-
-        if(hitBox.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent) && hitBox.gameObject.tag != "AttackCollider")
+        if(hitBox.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponent) && hitBox.gameObject.tag != "AttackCollider" && !hitBox.gameObject.GetComponent<Enemy>().enemyDead)
         {
+            damage = Mathf.Round(Random.Range(damageMin, damageMax));
             enemyComponent.TakeDamage(damage);
             SoundMaster.me.PlaySound (Random.Range (0, 2));
             SoundMaster.me.PlaySound (4);
