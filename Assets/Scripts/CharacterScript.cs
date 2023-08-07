@@ -5,10 +5,12 @@ using UnityEngine;
 public class CharacterScript : MonoBehaviour
 {
     public Animator myAnim;
+    public JoystickController joystickController;
     public float horizontalSpeed;
     public float damageMin;
     public float damageMax;
     public float damage;
+    
     [SerializeField] float health, maxHealth;
     [SerializeField] ProgressBar healthBar;
     [SerializeField] GameObject canvasObject;  
@@ -35,32 +37,41 @@ public class CharacterScript : MonoBehaviour
     void Update()
     {
 
-        HInput = Input.GetAxis("Horizontal");
-        VInput = Input.GetAxis("Vertical");
+        /*HInput = Input.GetAxis("Horizontal");
+        VInput = Input.GetAxis("Vertical");*/
         myAnim.SetFloat("Walk", moveDirection.sqrMagnitude);
 
         //sets gameObject local scale so that it faces the right direction when moving.
-        if (Input.GetAxis("Horizontal") > 0)
+        if (joystickController.joystickVec.x > 0)
         {
             transform.localScale = new Vector2(-1, 1);
         }
-        else if (Input.GetAxis("Horizontal") < 0)
+        else if (joystickController.joystickVec.x < 0)
         {
             transform.localScale = new Vector2(1, 1);
         }
 
-        if (Input.GetMouseButtonDown(0) && !isAttacking)
+        if(Input.GetKeyDown("space"))
         {
-            StartCoroutine(HandleIt());                 
+            if (!isAttacking)
+            {
+                StartCoroutine(HandleIt());                 
+            }
         }
-    
     }
 
     void FixedUpdate()
-    {
-        moveDirection = new Vector2(HInput, VInput);
-        moveDirection *= horizontalSpeed * Time.fixedDeltaTime;
-        transform.position += transform.TransformDirection(moveDirection);
+    {   
+        //player movement based on joystick position
+        if(joystickController.joystickVec.y != 0)
+        {
+            moveDirection = new Vector2(joystickController.joystickVec.x, joystickController.joystickVec.y);
+            moveDirection *= horizontalSpeed * Time.fixedDeltaTime;
+            transform.position += transform.TransformDirection(moveDirection);
+        }else
+        {
+           moveDirection = Vector2.zero; 
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hitBox)
@@ -87,14 +98,22 @@ public class CharacterScript : MonoBehaviour
         myAnim.Play("Knight_Hit");
     }
 
-private IEnumerator HandleIt()
-{  
-    // process pre-yield
-    horizontalSpeed = 0f;
-    isAttacking = true;
-    damage = Mathf.Round (Random.Range (damageMin, damageMax));     
-    yield return new WaitForSeconds( 0.5f );
-    // process post-yield
-    horizontalSpeed = 2.5f; 
-}
+    private IEnumerator HandleIt()
+    {  
+        // process pre-yield
+        horizontalSpeed = 0f;
+        isAttacking = true;
+        damage = Mathf.Round (Random.Range (damageMin, damageMax));     
+        yield return new WaitForSeconds( 0.5f );
+        // process post-yield
+        horizontalSpeed = 2.5f; 
+    }
+
+    public void attack()
+    {
+        if (!isAttacking)
+        {
+            StartCoroutine(HandleIt());                 
+        }
+    }
 }

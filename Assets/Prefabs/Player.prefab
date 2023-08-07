@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236555023319787809}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.4, y: -0.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4385347202697602314}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1386010218614895908
 GameObject:
@@ -103,7 +103,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -1957981122, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -187,7 +187,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 1302995653, guid: 15839254e3c1547459adf0f9ba6ed3b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -302,7 +302,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: -294291381, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -513980660, guid: 0cbb98dbfa883664e8eaa82e1783bcc3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -475,7 +475,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -673138118, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -559,7 +559,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: -2
   m_Sprite: {fileID: 1879090914, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -643,7 +643,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 1297578291, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -727,7 +727,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 674319658, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -811,7 +811,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 4
   m_Sprite: {fileID: -2117216263, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -972,7 +972,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 569307094, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1056,7 +1056,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1662841099
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 20877013, guid: 9d2b21ba952ec9846baeb52914ac39b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1220,6 +1220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myAnim: {fileID: 6102675951481860597}
+  joystickController: {fileID: 0}
   horizontalSpeed: 2.5
   damageMin: 10
   damageMax: 20

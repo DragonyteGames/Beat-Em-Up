@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - AttackCollider
+  - FxTemporaire
+  - FXHit
+  - FXBlood
   layers:
   - Default
   - TransparentFX
@@ -46,11 +49,11 @@ TagManager:
   - name: Actor
     uniqueID: 1015537163
     locked: 0
+  - name: FX
+    uniqueID: 2632126197
+    locked: 0
   - name: UI
     uniqueID: 1931176235
-    locked: 0
-  - name: 
-    uniqueID: 2632126197
     locked: 0
   - name: 
     uniqueID: 3568833645

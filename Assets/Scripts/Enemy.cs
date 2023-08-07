@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float scaleX;
 	public float scaleY;
+    public float  particleHeight;
     public bool enemyDead;
     public bool isHit;
     public GameObject myPlayer;
@@ -99,8 +100,17 @@ public class Enemy : MonoBehaviour
             health -= damageAmount;
             healthBar.UpdateHealth(health, maxHealth);
             StartCoroutine ("GotHit");
+            //damage text float
             textDamage.GetComponentInChildren<TextMeshProUGUI>().text = damageAmount.ToString();
             (Instantiate (textDamage, new Vector3(damagePoint.position.x, damagePoint.position.y, damagePoint.position.z), Quaternion.identity) as GameObject).transform.parent = canvasObject.transform;
+            //particle effect and positioning
+            for(int i = 0; i < GlobalScript.hitParticle.Length; i++)
+            {
+                GlobalScript.hitParticle [i].GetComponent<ParticleSystem> ().Play ();
+                GlobalScript.bloodParticle [i].GetComponent<ParticleSystem> ().Play ();
+                GlobalScript.hitParticle [i].GetComponent<Transform> ().transform.position = new Vector2 (transform.position.x, transform.position.y + particleHeight);
+                GlobalScript.bloodParticle [i].GetComponent<Transform> ().transform.position = new Vector2 (transform.position.x, transform.position.y + particleHeight);
+            }
         }
 
     }
