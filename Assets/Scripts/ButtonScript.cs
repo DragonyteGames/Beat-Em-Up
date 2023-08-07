@@ -10,10 +10,12 @@ public class ButtonScript : MonoBehaviour
     public GameObject loadingScreen;
 	public Slider loadingBar;
 	public TextMeshProUGUI percentage;
+	public GameObject[] uiElements;
 
     //function to load the desired scene
     public void LoadLevelMenu(){
         loadLevel(1);
+		SoundMaster.me.SwitchTracksLevel ();
     }
 
     //start LoadAsync coroutine, return scene int index
@@ -37,4 +39,15 @@ public class ButtonScript : MonoBehaviour
 			yield return null;
 		}
 	}
+
+	public void OptionsMenu (string buttonName)
+	{
+		if(buttonName == "Options")
+		{
+			uiElements[0].SetActive(true);	
+		}else if(buttonName == "ExitOptions")
+		{
+			uiElements[0].SetActive(false);	
+		}
+	}	
 }

@@ -18,23 +18,12 @@ public class SoundMaster : MonoBehaviour
 	public static SoundMaster me;
 	
 	void Start () {
-		
 		me = GetComponent<SoundMaster>();
 		Object.DontDestroyOnLoad(this);
 	}
 	
-	void Update(){
-		
-		
-		//if(Input.GetKeyDown(KeyCode.S)) StartCoroutine("SwitchTrax");
-		
-		//if(Input.GetKeyDown(KeyCode.D)) StartCoroutine("ReturnToMenu");
-		
-	}
-	
 	public void SwitchTracks()
 	{
-		
 		StartCoroutine("SwitchTrax");
 	}
 
@@ -44,16 +33,15 @@ public class SoundMaster : MonoBehaviour
 	}
 	IEnumerator SwitchTrax()
 	{
-		
 		t = 0;
 		
 		while(t < 1){
-			GetComponent<AudioSource>().volume = Mathf.Lerp(maxVolume, 0 , t);
+			mySrc.volume = Mathf.Lerp(maxVolume, 0 , t);
 			t += Time.deltaTime;
 			yield return null;
 		}
 		
-		GetComponent<AudioSource>().volume = t = 0;
+		mySrc.volume = t = 0;
 		menuTrackTime = mySrc.time;
 		//print ("MenuTracktime = " + menuTrackTime);
 		
@@ -61,7 +49,7 @@ public class SoundMaster : MonoBehaviour
 		mySrc.Play();
 		
 		while(t < 1){
-			GetComponent<AudioSource>().volume = Mathf.Lerp(0 , maxVolume, t);
+			mySrc.volume = Mathf.Lerp(0 , maxVolume, t);
 			t += Time.deltaTime;
 			yield return null;
 		}
@@ -70,16 +58,15 @@ public class SoundMaster : MonoBehaviour
 
 	IEnumerator SwitchTraxLevel()
 	{
-
 		t = 0;
 
 		while(t < 1){
-			GetComponent<AudioSource>().volume = Mathf.Lerp(maxVolume, 0 , t);
+			mySrc.volume = Mathf.Lerp(maxVolume, 0 , t);
 			t += Time.deltaTime;
 			yield return null;
 		}
 
-		GetComponent<AudioSource>().volume = t = 0;
+		mySrc.volume = t = 0;
 		menuTrackTime = mySrc.time;
 		//print ("MenuTracktime = " + menuTrackTime);
 
@@ -87,7 +74,7 @@ public class SoundMaster : MonoBehaviour
 		mySrc.Play();
 
 		while(t < 1){
-			GetComponent<AudioSource>().volume = Mathf.Lerp(0 , maxVolume, t);
+			mySrc.volume = Mathf.Lerp(0 , maxVolume, t);
 			t += Time.deltaTime;
 			yield return null;
 		}
@@ -96,27 +83,25 @@ public class SoundMaster : MonoBehaviour
 	
 	public void BackToMenu()
 	{
-		
 		StartCoroutine("ReturnToMenu");
 	}
 	
 	public IEnumerator ReturnToMenu()
 	{
-		
 		t = 0;
 		
 		while(t < 1){
-			GetComponent<AudioSource>().volume = Mathf.Lerp(maxVolume, 0 , t);
+			mySrc.volume = Mathf.Lerp(maxVolume, 0 , t);
 			t += Time.deltaTime;
 			yield return null;
 		}
-		GetComponent<AudioSource>().volume = t = 0;
+		mySrc.volume = t = 0;
 		mySrc.clip = tracks[0];
 		mySrc.time = menuTrackTime;
 		mySrc.Play();
 		
 		while(t < 1){
-			GetComponent<AudioSource>().volume = Mathf.Lerp(0 , maxVolume, t);
+			mySrc.volume = Mathf.Lerp(0 , maxVolume, t);
 			t += Time.deltaTime;
 			yield return null;
 		}
@@ -128,7 +113,7 @@ public class SoundMaster : MonoBehaviour
 	public void PlaySound(int num)
 	{
 		
-		sfxSrc.GetComponent<AudioSource>().PlayOneShot(sfx[num]);
+		sfxSrc.PlayOneShot(sfx[num]);
 		
 	}
 }
