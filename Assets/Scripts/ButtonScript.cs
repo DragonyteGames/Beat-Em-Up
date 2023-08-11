@@ -36,7 +36,6 @@ public class ButtonScript : MonoBehaviour
 	//Load the character menu
     public void LoadCharMenu()
 	{
-		SoundMaster.me.PlaySound (6); 
     }
 
 	//Quit the application
@@ -46,18 +45,9 @@ public class ButtonScript : MonoBehaviour
 	}
 
 	//load the level after playing sound
-
 	public void OptionsMenu (string buttonName)
 	{
-		SoundMaster.me.PlaySound (6);
-
-		if(buttonName == "Options")
-		{
-			uiElements[0].SetActive(true);	
-		}else if(buttonName == "ExitOptions")
-		{
-			uiElements[0].SetActive(false);	
-		}
+		StartCoroutine(OptionRun(buttonName));
 	}
 
 /*----------------------------- IEnumerators--------------------------*/
@@ -95,15 +85,25 @@ public class ButtonScript : MonoBehaviour
 
 	IEnumerator LevelMenuRun()
 	{
-		SoundMaster.me.PlaySound (6); 
 		waited = true;
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(0.5f);
 	}
 
 	IEnumerator AppQuitRun()
-	{
-		SoundMaster.me.PlaySound (6); 
-		yield return new WaitForSeconds(1f);
+	{ 
+		yield return new WaitForSeconds(0.5f);
 		Application.Quit();	
+	}
+
+	IEnumerator OptionRun(string buttonName)
+	{
+		yield return new WaitForSeconds(0.5f);
+		if(buttonName == "Options")
+		{
+			uiElements[0].SetActive(true);	
+		}else if(buttonName == "ExitOptions")
+		{
+			uiElements[0].SetActive(false);	
+		}
 	}
 }

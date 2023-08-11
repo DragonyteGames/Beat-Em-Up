@@ -7,20 +7,19 @@ public class ButtonInteraction : MonoBehaviour
     [SerializeField] GameObject[] buttonImage;
     public GameObject lockImage;
 	public void OnMouseDown()
-    {
+    {   
+        SoundMaster.me.PlaySound (6); 
         StartCoroutine("ButtonImageChange");
 	}
 
 	public void OnMouseEnter()
     { 
-		transform.localScale = new Vector2 (1.1f, 1.1f);
-		//SoundMaster.me.PlaySound (9); 	
+		transform.localScale = new Vector2 (1.1f, 1.1f);	
 	}
 
     public void OnMouseExit()
     { 
 		transform.localScale = new Vector2 (1f, 1f);
-		//SoundMaster.me.PlaySound (9); 	
 	}
 
     IEnumerator ButtonImageChange()
