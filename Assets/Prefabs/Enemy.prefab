@@ -1302,6 +1302,7 @@ MonoBehaviour:
   damageMax: 5
   textDamage: {fileID: 6171542247982005788, guid: 371cc68ebe38da4498943c25a258e91b, type: 3}
   damagePoint: {fileID: 8398080035532867648}
+  damageTextPos: {fileID: 0}
   damage: 10
   health: 100
   maxHealth: 100
