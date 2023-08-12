@@ -16,7 +16,7 @@ public class ProgressBar : MonoBehaviour
         slider.value = currentValue / maxValue;
     }
 
-    void FixedUpdate()
+    void Update()
     {   
         if(myType == "PlayerHealth")
         {
