@@ -10,6 +10,7 @@ public class CharacterScript : MonoBehaviour
     public float damageMin;
     public float damageMax;
     public float damage;
+    public float  particleHeight;
     
     [SerializeField] float health, maxHealth;
     [SerializeField] ProgressBar healthBar;
@@ -33,12 +34,19 @@ public class CharacterScript : MonoBehaviour
         damage = Mathf.Round(Random.Range(damageMin, damageMax)); 
     }
 
-    // Update is called once per frame
     void Update()
-    {
+    {       
+        //player movement based on joystick position
+        if(joystickController.joystickVec.y != 0)
+        {
+            moveDirection = new Vector2(joystickController.joystickVec.x, joystickController.joystickVec.y);
+            moveDirection *= horizontalSpeed * Time.deltaTime;
+            transform.position += transform.TransformDirection(moveDirection);
+        }else
+        {
+           moveDirection = Vector2.zero; 
+        }
 
-        /*HInput = Input.GetAxis("Horizontal");
-        VInput = Input.GetAxis("Vertical");*/
         myAnim.SetFloat("Walk", moveDirection.sqrMagnitude);
 
         //sets gameObject local scale so that it faces the right direction when moving.
@@ -57,21 +65,7 @@ public class CharacterScript : MonoBehaviour
             {
                 StartCoroutine(HandleIt());                 
             }
-        }
-    }
-
-    void FixedUpdate()
-    {   
-        //player movement based on joystick position
-        if(joystickController.joystickVec.y != 0)
-        {
-            moveDirection = new Vector2(joystickController.joystickVec.x, joystickController.joystickVec.y);
-            moveDirection *= horizontalSpeed * Time.fixedDeltaTime;
-            transform.position += transform.TransformDirection(moveDirection);
-        }else
-        {
-           moveDirection = Vector2.zero; 
-        }
+        }          
     }
 
     void OnTriggerEnter2D(Collider2D hitBox)
@@ -81,7 +75,7 @@ public class CharacterScript : MonoBehaviour
             damage = Mathf.Round(Random.Range(damageMin, damageMax));
             enemyComponent.TakeDamage(damage);
             SoundMaster.me.PlaySound (Random.Range (0, 2));
-            SoundMaster.me.PlaySound (4);
+            SoundMaster.me.PlaySound (3);
         }
     }
 
@@ -96,6 +90,13 @@ public class CharacterScript : MonoBehaviour
         health -= damageAmount;
         healthBar.UpdateHealth(health, maxHealth);
         myAnim.Play("Knight_Hit");
+        for(int i = 0; i < GlobalScript.hitParticle.Length; i++)
+        {
+            GlobalScript.hitParticle [i].GetComponent<ParticleSystem> ().Play ();
+            GlobalScript.bloodParticle [i].GetComponent<ParticleSystem> ().Play ();
+            GlobalScript.hitParticle [i].GetComponent<Transform> ().transform.position = new Vector2 (transform.position.x, transform.position.y + particleHeight);
+            GlobalScript.bloodParticle [i].GetComponent<Transform> ().transform.position = new Vector2 (transform.position.x, transform.position.y + particleHeight);
+        }
     }
 
     private IEnumerator HandleIt()

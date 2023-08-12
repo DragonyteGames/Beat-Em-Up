@@ -45,7 +45,7 @@ public class SoundMaster : MonoBehaviour
 		menuTrackTime = mySrc.time;
 		//print ("MenuTracktime = " + menuTrackTime);
 		
-		mySrc.clip = tracks[0];
+		mySrc.clip = tracks[1];
 		mySrc.Play();
 		
 		while(t < 1){
@@ -70,7 +70,7 @@ public class SoundMaster : MonoBehaviour
 		menuTrackTime = mySrc.time;
 		//print ("MenuTracktime = " + menuTrackTime);
 
-		mySrc.clip = tracks[Random.Range(1, tracks.Length)];
+		mySrc.clip =  tracks[2]; //tracks[Random.Range(2, tracks.Length)];
 		mySrc.Play();
 
 		while(t < 1){

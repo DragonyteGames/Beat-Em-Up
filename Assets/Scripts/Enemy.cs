@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour
     public float damageMax;
     public GameObject textDamage;
     public Transform damagePoint;
+    public Transform damageTextPos;
     
     [SerializeField] float damage; 
     [SerializeField] float health, maxHealth;
@@ -25,6 +26,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject canvasObject; 
     [SerializeField] Transform target;
     [SerializeField] NavMeshAgent agent;
+
+    private bool deathSFXplayed;
     
     void Awake()
     {
@@ -35,6 +38,7 @@ public class Enemy : MonoBehaviour
     {
         enemyDead = false;
         isHit = false;
+        deathSFXplayed = false;
         damage = Mathf.Round(Random.Range(damageMin, damageMax));
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
@@ -54,33 +58,47 @@ public class Enemy : MonoBehaviour
             GetComponent<Collider2D>().enabled = false;
             agent.enabled = false;
             canvasObject.SetActive(false);
+
+            if(!deathSFXplayed)
+            {
+                SoundMaster.me.PlaySound (Random.Range(4,6));
+                deathSFXplayed = true;
+            }
+            
         }
-        
        
         if(!enemyDead && !isHit)
-        {
+        {   
             agent.SetDestination(target.position);
             myAnim.SetBool("Walk", true);
-            agent.isStopped = false;
 
-            if((agent.remainingDistance <=2.0f)){
+            if(agent.remainingDistance > 2.0f && agent.remainingDistance <= 10f)
+            {   
+                myAnim.SetBool("Walk", true);
+                agent.isStopped = false;
+            }else if(agent.remainingDistance <=2.0f){
                 if(transform.position.x >= target.transform.position.x)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x+1.9f, target.transform.position.y), agent.speed*Time.fixedDeltaTime);
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x+2.0f, target.transform.position.y), 1f*Time.deltaTime);
                     agent.isStopped = false;
                     myAnim.SetBool("Walk", true);
                 }else if(transform.position.x < target.transform.position.x)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x-2.0f, target.transform.position.y), agent.speed*Time.fixedDeltaTime);
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x-2.0f, target.transform.position.y), 1f*Time.deltaTime);
                     myAnim.SetBool("Walk", true);
                     agent.isStopped = false;
                 }
 
-                if(Mathf.Abs(transform.position.y - target.transform.position.y) <= 0.5f){
+                if(Mathf.Abs(transform.position.y - target.transform.position.y) <= 1f)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, target.transform.position.y), 1f*Time.deltaTime);
                     myAnim.SetBool("Walk", false);
                     myAnim.SetTrigger("Attack1");
                     agent.isStopped = true;
                 }
+            }else{
+                agent.isStopped = true;
+                myAnim.SetBool("Walk", false);
             }
 
 			if (myPlayer.transform.position.x >= transform.position.x) 
@@ -102,7 +120,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine ("GotHit");
             //damage text float
             textDamage.GetComponentInChildren<TextMeshProUGUI>().text = damageAmount.ToString();
-            (Instantiate (textDamage, new Vector3(damagePoint.position.x, damagePoint.position.y, damagePoint.position.z), Quaternion.identity) as GameObject).transform.parent = canvasObject.transform;
+            (Instantiate (textDamage, new Vector3(damageTextPos.position.x, damageTextPos.position.y, damageTextPos.position.z), Quaternion.identity) as GameObject).transform.parent = canvasObject.transform;
             //particle effect and positioning
             for(int i = 0; i < GlobalScript.hitParticle.Length; i++)
             {
@@ -118,7 +136,7 @@ public class Enemy : MonoBehaviour
     IEnumerator GotHit(){
         isHit = true;
         myAnim.Play("Enemy_Hit");
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(1f);
         isHit = false;
     }
 
@@ -131,7 +149,7 @@ public class Enemy : MonoBehaviour
         {
             playerComponent.TakeDamage(damage);
             SoundMaster.me.PlaySound (Random.Range (0, 2));
-            SoundMaster.me.PlaySound (4);
+            SoundMaster.me.PlaySound (3);
         }
     }
     

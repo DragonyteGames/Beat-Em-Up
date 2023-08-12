@@ -16,7 +16,7 @@ public class ProgressBar : MonoBehaviour
         slider.value = currentValue / maxValue;
     }
 
-    void FixedUpdate()
+    void Update()
     {   
         if(myType == "PlayerHealth")
         {
@@ -25,7 +25,7 @@ public class ProgressBar : MonoBehaviour
 
         if(myType == "EnemyHealth")
         {
-            myParent.transform.position = new Vector2 (target.transform.position.x, target.transform.position.y +4f);
+            myParent.transform.position = new Vector2 (target.transform.position.x, target.transform.position.y +3f);
         }
         
     }
