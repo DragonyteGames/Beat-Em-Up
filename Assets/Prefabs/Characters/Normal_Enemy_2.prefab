@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1822248943, guid: fccf00b9f50b08947a15e87d68f44c1b, type: 3}
+    - target: {fileID: 402493072996150081, guid: 968894150384ba640b792a4798d71acd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 894655699519587193, guid: 968894150384ba640b792a4798d71acd, type: 3}
       propertyPath: m_Name
       value: Normal_Enemy_2
@@ -127,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1822248943, guid: fccf00b9f50b08947a15e87d68f44c1b, type: 3}
+    - target: {fileID: 3436739432922025746, guid: 968894150384ba640b792a4798d71acd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3787265515698423301, guid: 968894150384ba640b792a4798d71acd, type: 3}
       propertyPath: textDamage
       value: 
@@ -143,6 +151,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -862760305, guid: fccf00b9f50b08947a15e87d68f44c1b, type: 3}
+    - target: {fileID: 3867779305448808953, guid: 968894150384ba640b792a4798d71acd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4498811766232736126, guid: 968894150384ba640b792a4798d71acd, type: 3}
       propertyPath: m_Value
       value: 1
@@ -167,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1535100465, guid: fccf00b9f50b08947a15e87d68f44c1b, type: 3}
+    - target: {fileID: 4745609950585144342, guid: 968894150384ba640b792a4798d71acd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4750757911380006015, guid: 968894150384ba640b792a4798d71acd, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -219,6 +235,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -831970902, guid: fccf00b9f50b08947a15e87d68f44c1b, type: 3}
+    - target: {fileID: 7554937788291836499, guid: 968894150384ba640b792a4798d71acd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7809201358650036779, guid: 968894150384ba640b792a4798d71acd, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1210979
@@ -283,6 +303,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1149671781, guid: fccf00b9f50b08947a15e87d68f44c1b, type: 3}
+    - target: {fileID: 9191322816185519493, guid: 968894150384ba640b792a4798d71acd, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
