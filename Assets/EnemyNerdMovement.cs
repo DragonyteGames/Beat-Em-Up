@@ -4,7 +4,6 @@ public class EnemyNerdMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
 
-
     bool facingRight = true;
     private Rigidbody2D rb;
 
@@ -16,21 +15,21 @@ public class EnemyNerdMovement : MonoBehaviour
     private void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical"); // New line for vertical input
 
-        // Calculate the velocity for sideways movement
-        Vector2 movement = new Vector2(horizontalInput * moveSpeed, rb.velocity.y);
+        // Calculate the velocity for movement
+        Vector2 movement = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed); // Changed y component to verticalInput
         rb.velocity = movement;
 
-        if(horizontalInput > 0 && facingRight)
+        if (horizontalInput < 0 && !facingRight)
         {
             Flip();
         }
-        if(horizontalInput < 0 && !facingRight)
+        else if (horizontalInput > 0 && facingRight)
         {
             Flip();
         }
 
-        
     }
 
     void Flip()
