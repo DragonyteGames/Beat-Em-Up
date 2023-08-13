@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4363a696a129a69488b50c5d25797450, type: 3}
+  m_Name: PlayerStatsSaveObject
+  m_EditorClassIdentifier: 
+  isExpanded: 1
+  saveKey: 34b2e6c1-da2b-43e0-9a27-86e6a3248c18
+  playerHealth:
+    key: PlayerHealth
+    value: 100
+  playerMaxHealth:
+    key: PlayerMaxHealth
+    value: 100
+  playerMinDamage:
+    key: PlayerMinDamage
+    value: 15
+  playerMaxDamage:
+    key: PlayerMaxDamage
+    value: 20

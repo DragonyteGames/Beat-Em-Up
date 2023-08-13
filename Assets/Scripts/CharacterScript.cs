@@ -1,23 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Save;
 public class CharacterScript : MonoBehaviour
 {
     public Animator myAnim;
     public JoystickController joystickController;
     public float horizontalSpeed;
-    public float damageMin;
-    public float damageMax;
     public float damage;
     public float  particleHeight;
-    
+
+    [SerializeField] int damageMin, damageMax;
     [SerializeField] float health, maxHealth;
     [SerializeField] ProgressBar healthBar;
     [SerializeField] GameObject canvasObject;  
 
     public bool isAttacking = false;
     public static CharacterScript instance;
+    public SaveDirector saveManager;
 
     float HInput;
     float VInput;
@@ -28,9 +28,14 @@ public class CharacterScript : MonoBehaviour
     {
         instance = this;
         healthBar = canvasObject.GetComponentInChildren<ProgressBar>();
+        GameObject.Find("Save Manager").GetComponent<SaveDirector>();
     }
     void Start()
-    {
+    {   
+        health = SaveDirector.me.health;
+        maxHealth = SaveDirector.me.maxHealth;
+        damageMin = SaveDirector.me.damageMin;
+        damageMax = SaveDirector.me.damageMax;
         damage = Mathf.Round(Random.Range(damageMin, damageMax)); 
     }
 
