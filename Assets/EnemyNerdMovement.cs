@@ -21,11 +21,11 @@ public class EnemyNerdMovement : MonoBehaviour
         Vector2 movement = new Vector2(horizontalInput * moveSpeed, verticalInput * moveSpeed); // Changed y component to verticalInput
         rb.velocity = movement;
 
-        if (horizontalInput < 0 && !facingRight)
+        if (horizontalInput > 0 && !facingRight)
         {
             Flip();
         }
-        else if (horizontalInput > 0 && facingRight)
+        else if (horizontalInput < 0 && facingRight)
         {
             Flip();
         }
