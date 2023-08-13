@@ -17,7 +17,7 @@ public class WaterReflectionEditor : Editor
         waterReflection.UpdateCamera();
 
         spriteRenderer = serializedObject.FindProperty("spriteRenderer");
-        camera = serializedObject.FindProperty("camera");
+        camera = serializedObject.FindProperty("reflectionCamera");
         waterShader = serializedObject.FindProperty("waterShader");
         waterTexture = serializedObject.FindProperty("waterTexture");
     }

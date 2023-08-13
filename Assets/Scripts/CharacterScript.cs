@@ -114,12 +114,4 @@ public class CharacterScript : MonoBehaviour
         // process post-yield
         horizontalSpeed = 2.5f; 
     }
-
-    public void attack()
-    {
-        if (!isAttacking)
-        {
-            StartCoroutine(HandleIt());                 
-        }
-    }
 }

@@ -2280,6 +2280,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
+--- !u!20 &1203971622 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 795094567185100671, guid: 3b8a32e2ab3bd824bb22b6d9a38e1a33, type: 3}
+  m_PrefabInstance: {fileID: 1227957848}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1212366548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,6 +2537,10 @@ PrefabInstance:
       propertyPath: refraction
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 795094567581243726, guid: 3b8a32e2ab3bd824bb22b6d9a38e1a33, type: 3}
+      propertyPath: reflectionCamera
+      value: 
+      objectReference: {fileID: 1203971622}
     - target: {fileID: 795094567581243726, guid: 3b8a32e2ab3bd824bb22b6d9a38e1a33, type: 3}
       propertyPath: turbulencesStrength
       value: 0
