@@ -396,7 +396,7 @@ SpriteRenderer:
   m_Size: {x: 0.97, y: 0.54}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3915058153691189789
@@ -1222,15 +1222,16 @@ MonoBehaviour:
   myAnim: {fileID: 6102675951481860597}
   joystickController: {fileID: 0}
   horizontalSpeed: 2.5
-  damageMin: 10
-  damageMax: 20
   damage: 0
   particleHeight: 0
+  damageMin: 10
+  damageMax: 20
   health: 100
   maxHealth: 100
   healthBar: {fileID: 0}
   canvasObject: {fileID: 0}
   isAttacking: 0
+  saveManager: {fileID: 0}
 --- !u!210 &4237429832821477879
 SortingGroup:
   m_ObjectHideFlags: 0
