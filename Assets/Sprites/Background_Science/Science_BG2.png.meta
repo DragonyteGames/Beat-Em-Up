@@ -119,19 +119,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -139,10 +126,10 @@ TextureImporter:
       name: Science_BG2_0
       rect:
         serializedVersion: 2
-        x: 62
-        y: 811
-        width: 161
-        height: 188
+        x: 207
+        y: 2705
+        width: 535
+        height: 627
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d14f9075064da0c42ac76afe5ce7cefc
-      internalID: 2140873214
+      spriteID: 1bf25a64c71e23845b1effea320d892d
+      internalID: -1401865477
       vertices: []
       indices: 
       edges: []
@@ -160,10 +147,10 @@ TextureImporter:
       name: Science_BG2_1
       rect:
         serializedVersion: 2
-        x: 307
-        y: 832
-        width: 92
-        height: 127
+        x: 1022
+        y: 2773
+        width: 307
+        height: 425
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfe12513401c47a4f8bdef82b03230f2
-      internalID: -699997899
+      spriteID: 4f457d6092c17cc46b22726f51dca6a6
+      internalID: 1071291846
       vertices: []
       indices: 
       edges: []
@@ -181,10 +168,10 @@ TextureImporter:
       name: Science_BG2_2
       rect:
         serializedVersion: 2
-        x: 493
-        y: 825
-        width: 160
-        height: 170
+        x: 1644
+        y: 2753
+        width: 531
+        height: 565
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc3b8da724665f942ab94cf5d04e13f1
-      internalID: 1630170414
+      spriteID: e5dd952e32d27b241a7131f1fb8f64bd
+      internalID: -185384129
       vertices: []
       indices: 
       edges: []
@@ -202,10 +189,10 @@ TextureImporter:
       name: Science_BG2_3
       rect:
         serializedVersion: 2
-        x: 61
-        y: 552
-        width: 150
-        height: 210
+        x: 206
+        y: 1841
+        width: 498
+        height: 701
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac53db26896ed6a4e93d6c6a9313afb8
-      internalID: -534199515
+      spriteID: e60b202a043f93b4c974e9e17020700e
+      internalID: -260627619
       vertices: []
       indices: 
       edges: []
@@ -223,10 +210,10 @@ TextureImporter:
       name: Science_BG2_4
       rect:
         serializedVersion: 2
-        x: 272
-        y: 598
-        width: 133
-        height: 147
+        x: 906
+        y: 1996
+        width: 445
+        height: 488
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db87a9d6f30b7f844ade379a16b57b92
-      internalID: -1984007261
+      spriteID: 0cb0336090db121488b3f3914d76924f
+      internalID: 1492722253
       vertices: []
       indices: 
       edges: []
@@ -244,10 +231,10 @@ TextureImporter:
       name: Science_BG2_5
       rect:
         serializedVersion: 2
-        x: 452
-        y: 611
-        width: 227
-        height: 116
+        x: 1507
+        y: 2038
+        width: 757
+        height: 387
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ad15ce3cf777ae498ec66910146123d
-      internalID: -1850758380
+      spriteID: 36b5c63ff1cfddd42bfdcbe59fa9efe5
+      internalID: -758246021
       vertices: []
       indices: 
       edges: []
@@ -265,10 +252,10 @@ TextureImporter:
       name: Science_BG2_6
       rect:
         serializedVersion: 2
-        x: 73
-        y: 333
-        width: 94
-        height: 161
+        x: 241
+        y: 1110
+        width: 316
+        height: 536
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4d23d9f3e2bcd4ab30951c342ee9a8
-      internalID: -1971357983
+      spriteID: fa47e7f977c73a34fbcf5081c495e9e6
+      internalID: -581632333
       vertices: []
       indices: 
       edges: []
@@ -286,10 +273,10 @@ TextureImporter:
       name: Science_BG2_7
       rect:
         serializedVersion: 2
-        x: 449
-        y: 241
-        width: 126
-        height: 261
+        x: 1497
+        y: 805
+        width: 418
+        height: 868
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dbb45c4e1decf5d44b08ace2a7490e2e
-      internalID: 921333142
+      spriteID: 7ebc0aa06a7fddb4393777d30ef5baf9
+      internalID: 859459330
       vertices: []
       indices: 
       edges: []
@@ -314,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Science_BG2_0: 2140873214
-      Science_BG2_1: -699997899
-      Science_BG2_2: 1630170414
-      Science_BG2_3: -534199515
-      Science_BG2_4: -1984007261
-      Science_BG2_5: -1850758380
-      Science_BG2_6: -1971357983
-      Science_BG2_7: 921333142
+      Science_BG2_0: -1401865477
+      Science_BG2_1: 1071291846
+      Science_BG2_2: -185384129
+      Science_BG2_3: -260627619
+      Science_BG2_4: 1492722253
+      Science_BG2_5: -758246021
+      Science_BG2_6: -581632333
+      Science_BG2_7: 859459330
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

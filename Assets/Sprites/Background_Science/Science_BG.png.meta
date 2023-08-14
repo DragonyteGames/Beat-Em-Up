@@ -119,19 +119,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -139,10 +126,10 @@ TextureImporter:
       name: Science_BG_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 958
-        width: 114
-        height: 64
+        x: 120
+        y: 3195
+        width: 378
+        height: 214
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0e8e477b8248d340a25549b08289590
-      internalID: 1209704079
+      spriteID: 29db37744e7e7f447ab633208b62f818
+      internalID: -208666267
       vertices: []
       indices: 
       edges: []
@@ -160,10 +147,10 @@ TextureImporter:
       name: Science_BG_1
       rect:
         serializedVersion: 2
-        x: 171
-        y: 957
-        width: 114
-        height: 64
+        x: 569
+        y: 3191
+        width: 380
+        height: 213
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86f5861a51e5e2c4c8701af4927d4f5b
-      internalID: -1203790184
+      spriteID: 45802a6b632fcc84ebb01c69e26f31af
+      internalID: 1562201290
       vertices: []
       indices: 
       edges: []
@@ -181,10 +168,10 @@ TextureImporter:
       name: Science_BG_2
       rect:
         serializedVersion: 2
-        x: 306
-        y: 956
-        width: 114
-        height: 65
+        x: 1021
+        y: 3189
+        width: 378
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a32bcc7945c6d334884406bec39adf0b
-      internalID: -183251566
+      spriteID: 2bd17932487168e438addbb55c8317d5
+      internalID: 1278821492
       vertices: []
       indices: 
       edges: []
@@ -202,10 +189,10 @@ TextureImporter:
       name: Science_BG_3
       rect:
         serializedVersion: 2
-        x: 462
-        y: 926
-        width: 106
-        height: 102
+        x: 1540
+        y: 3087
+        width: 353
+        height: 340
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723f9bd120c179e49b373e799e917d2d
-      internalID: 678088069
+      spriteID: 697cf3297029dbb4abe79d2f489ddc49
+      internalID: 441382647
       vertices: []
       indices: 
       edges: []
@@ -223,10 +210,10 @@ TextureImporter:
       name: Science_BG_4
       rect:
         serializedVersion: 2
-        x: 613
-        y: 902
-        width: 92
-        height: 129
+        x: 2043
+        y: 3054
+        width: 309
+        height: 382
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d868e58da26d19408b7e948993c1a19
-      internalID: 2094866095
+      spriteID: 28fa3b713abd6a945bc8ad7d64ef4a1d
+      internalID: -1997202474
       vertices: []
       indices: 
       edges: []
@@ -244,10 +231,10 @@ TextureImporter:
       name: Science_BG_5
       rect:
         serializedVersion: 2
-        x: 18
-        y: 702
-        width: 262
-        height: 155
+        x: 60
+        y: 2342
+        width: 873
+        height: 515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0567d6e5314a86b4282d0a4edb1d7bbe
-      internalID: 379330780
+      spriteID: 94954db5e8817a64684f6258c11ce71e
+      internalID: -584555591
       vertices: []
       indices: 
       edges: []
@@ -265,10 +252,10 @@ TextureImporter:
       name: Science_BG_6
       rect:
         serializedVersion: 2
-        x: 309
-        y: 754
-        width: 91
-        height: 91
+        x: 1031
+        y: 2515
+        width: 300
+        height: 303
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eabf7bb072e9aaa4f9ba9c7bc8049f79
-      internalID: -1251796938
+      spriteID: 45a3eba2dd97ab643892ac194ee49544
+      internalID: -2053986070
       vertices: []
       indices: 
       edges: []
@@ -286,10 +273,10 @@ TextureImporter:
       name: Science_BG_7
       rect:
         serializedVersion: 2
-        x: 408
-        y: 619
-        width: 161
-        height: 230
+        x: 1362
+        y: 2062
+        width: 534
+        height: 768
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d78991023d77d14c9bb26c00c665bd1
-      internalID: 31497209
+      spriteID: 4642b629aac578747bda5939afc8a515
+      internalID: 1163585191
       vertices: []
       indices: 
       edges: []
@@ -307,10 +294,10 @@ TextureImporter:
       name: Science_BG_8
       rect:
         serializedVersion: 2
-        x: 589
-        y: 607
-        width: 110
-        height: 233
+        x: 1963
+        y: 2023
+        width: 366
+        height: 778
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,8 +305,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30252409798ed7146bf7f42ba0c27ca8
-      internalID: 77758980
+      spriteID: c3b765d7f697ce241a67c76dc30f7d12
+      internalID: 28567250
       vertices: []
       indices: 
       edges: []
@@ -328,10 +315,10 @@ TextureImporter:
       name: Science_BG_9
       rect:
         serializedVersion: 2
-        x: 90
-        y: 482
-        width: 196
-        height: 159
+        x: 298
+        y: 1607
+        width: 654
+        height: 529
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,8 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bc9e494e6aaad04dbe0a9b72d2fafc4
-      internalID: 1827270270
+      spriteID: 8fe63397b8aff344db9abc81ecaf0794
+      internalID: 532665228
       vertices: []
       indices: 
       edges: []
@@ -349,10 +336,10 @@ TextureImporter:
       name: Science_BG_10
       rect:
         serializedVersion: 2
-        x: 354
-        y: 497
-        width: 157
-        height: 52
+        x: 1182
+        y: 1656
+        width: 524
+        height: 175
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,8 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2fd9c7c9abe1e4459f9326f44e8b986
-      internalID: -1569683728
+      spriteID: 59f7af1b451f1844f9d2f70bca9229a7
+      internalID: -428971606
       vertices: []
       indices: 
       edges: []
@@ -370,10 +357,10 @@ TextureImporter:
       name: Science_BG_11
       rect:
         serializedVersion: 2
-        x: 40
-        y: 409
-        width: 265
-        height: 14
+        x: 132
+        y: 1363
+        width: 884
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,8 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e8442ce7433a07478f143d30ae70437
-      internalID: 519677365
+      spriteID: 928b321189cd7c744be5a29a93bd454d
+      internalID: 1206409024
       vertices: []
       indices: 
       edges: []
@@ -391,10 +378,10 @@ TextureImporter:
       name: Science_BG_12
       rect:
         serializedVersion: 2
-        x: 108
-        y: 316
-        width: 78
-        height: 44
+        x: 360
+        y: 1053
+        width: 130
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,8 +389,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9905ab263242d4438501defc07326c0
-      internalID: -298466314
+      spriteID: 0f1fd0460d9c9d949b405575d92b3719
+      internalID: 1688529176
       vertices: []
       indices: 
       edges: []
@@ -412,10 +399,10 @@ TextureImporter:
       name: Science_BG_13
       rect:
         serializedVersion: 2
-        x: 188
-        y: 316
-        width: 39
-        height: 44
+        x: 492
+        y: 1053
+        width: 128
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,8 +410,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb350dda652ea4c48bcb395e33ac10fe
-      internalID: 391926262
+      spriteID: 27c2339298622d8488e819dcf7750845
+      internalID: 1500541020
       vertices: []
       indices: 
       edges: []
@@ -433,10 +420,10 @@ TextureImporter:
       name: Science_BG_14
       rect:
         serializedVersion: 2
-        x: 389
-        y: 225
-        width: 288
-        height: 183
+        x: 629
+        y: 1053
+        width: 128
+        height: 148
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,8 +431,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecb586da43ce84f40b428d9a97d104bf
-      internalID: 1746776987
+      spriteID: 1bbab24839eaad8489efcc6685acbdbf
+      internalID: 2121102446
       vertices: []
       indices: 
       edges: []
@@ -454,10 +441,10 @@ TextureImporter:
       name: Science_BG_15
       rect:
         serializedVersion: 2
-        x: 112
-        y: 195
-        width: 90
-        height: 58
+        x: 1297
+        y: 750
+        width: 960
+        height: 612
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,8 +452,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61ed0d6903a42384d92982f733465902
-      internalID: -979544580
+      spriteID: e3411bee58f772c4d8f55660d19ed608
+      internalID: 1724174303
       vertices: []
       indices: 
       edges: []
@@ -475,10 +462,10 @@ TextureImporter:
       name: Science_BG_16
       rect:
         serializedVersion: 2
-        x: 42
-        y: 28
-        width: 361
-        height: 141
+        x: 372
+        y: 651
+        width: 301
+        height: 193
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,8 +473,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4575919736ff9499b9c3a018613794
-      internalID: 982217252
+      spriteID: 710220a052d68d34389db66b0532b776
+      internalID: -884595487
       vertices: []
       indices: 
       edges: []
@@ -496,10 +483,10 @@ TextureImporter:
       name: Science_BG_17
       rect:
         serializedVersion: 2
-        x: 545
-        y: 42
-        width: 79
-        height: 139
+        x: 139
+        y: 94
+        width: 1205
+        height: 468
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,8 +494,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82beb269213d2bb45ac6be1fc1f7667e
-      internalID: -720337385
+      spriteID: 563e75bd56bd8a8469228a4e83d70476
+      internalID: 952059330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Science_BG_18
+      rect:
+        serializedVersion: 2
+        x: 1815
+        y: 142
+        width: 266
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d510d5455bcd1a549bae5deaed788e8a
+      internalID: -1794843585
       vertices: []
       indices: 
       edges: []
@@ -524,24 +532,25 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Science_BG_0: 1209704079
-      Science_BG_1: -1203790184
-      Science_BG_10: -1569683728
-      Science_BG_11: 519677365
-      Science_BG_12: -298466314
-      Science_BG_13: 391926262
-      Science_BG_14: 1746776987
-      Science_BG_15: -979544580
-      Science_BG_16: 982217252
-      Science_BG_17: -720337385
-      Science_BG_2: -183251566
-      Science_BG_3: 678088069
-      Science_BG_4: 2094866095
-      Science_BG_5: 379330780
-      Science_BG_6: -1251796938
-      Science_BG_7: 31497209
-      Science_BG_8: 77758980
-      Science_BG_9: 1827270270
+      Science_BG_0: -208666267
+      Science_BG_1: 1562201290
+      Science_BG_10: -428971606
+      Science_BG_11: 1206409024
+      Science_BG_12: 1688529176
+      Science_BG_13: 1500541020
+      Science_BG_14: 2121102446
+      Science_BG_15: 1724174303
+      Science_BG_16: -884595487
+      Science_BG_17: 952059330
+      Science_BG_18: -1794843585
+      Science_BG_2: 1278821492
+      Science_BG_3: 441382647
+      Science_BG_4: -1997202474
+      Science_BG_5: -584555591
+      Science_BG_6: -2053986070
+      Science_BG_7: 1163585191
+      Science_BG_8: 28567250
+      Science_BG_9: 532665228
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
