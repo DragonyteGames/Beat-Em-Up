@@ -19,8 +19,16 @@ public class SoundMaster : MonoBehaviour
 	
 	void Start ()
 	{
-		me = GetComponent<SoundMaster>();
-		Object.DontDestroyOnLoad(this);
+		
+
+		if(me == null)
+		{
+			me = GetComponent<SoundMaster>();
+			Object.DontDestroyOnLoad(this);
+		}else{
+			Destroy(this);
+		}
+
 		mySrc.clip = tracks[0];
 		mySrc.time = menuTrackTime;
 		mySrc.Play();

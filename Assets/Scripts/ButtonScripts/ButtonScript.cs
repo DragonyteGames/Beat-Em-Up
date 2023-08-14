@@ -12,29 +12,24 @@ public class ButtonScript : MonoBehaviour
 	public TextMeshProUGUI percentage;
 	public GameObject[] uiElements;
 
-	private bool waited = false;
-
     //function to load the desired scene
     public void LoadLevelMenu(int sceneIndex)
 	{
 		SoundMaster.me.SwitchTracks();
-		StartCoroutine("MenuRun");
-		if(waited)StartCoroutine(LoadAsyncMenu(sceneIndex));			
+		StartCoroutine(MenuRun(sceneIndex));
     }
 
     public void LoadMainMenu(int sceneIndex)
 	{
 		SoundMaster.me.BackToMenu();
-		StartCoroutine("MenuRun");
-		if(waited)StartCoroutine(LoadAsyncMenu(sceneIndex));			
+		StartCoroutine(MenuRun(sceneIndex));				
     }
 
     //start LoadAsync coroutine, return scene int index
     public void loadLevel (int sceneIndex)
 	{
 		SoundMaster.me.SwitchTracksLevel();
-		StartCoroutine("MenuRun");
-		if(waited)StartCoroutine(LoadAsync(sceneIndex));
+		StartCoroutine(LevelRun(sceneIndex));
 	}
 
 	//Load the character menu
@@ -87,18 +82,28 @@ public class ButtonScript : MonoBehaviour
 		}
 	}
 
-	IEnumerator MenuRun()
+	//coroutine for running Menu - Main Menu and Level Menu
+	IEnumerator MenuRun(int sceneIndex)
 	{
-		waited = true;
 		yield return new WaitForSeconds(0.5f);
+		StartCoroutine(LoadAsyncMenu(sceneIndex));
 	}
 
+	//coroutine for running Level based on "Level" + SceneIndex to get the name of the unity scene
+	IEnumerator LevelRun(int sceneIndex)
+	{
+		yield return new WaitForSeconds(0.5f);
+		StartCoroutine(LoadAsync(sceneIndex));
+	}
+
+	//coroutine for quitting the game
 	IEnumerator AppQuitRun()
 	{ 
 		yield return new WaitForSeconds(0.5f);
 		Application.Quit();	
 	}
 
+	//coroutine for opening the options menu window within the Main Menu
 	IEnumerator OptionRun(string buttonName)
 	{
 		yield return new WaitForSeconds(0.5f);
