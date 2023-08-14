@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5147014626938453857}
   - component: {fileID: 52205757826487792}
+  - component: {fileID: 3197413241237182330}
   m_Layer: 0
   m_Name: Director
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &52205757826487792
 MonoBehaviour:
@@ -44,3 +45,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad17a88be0fde140a4f2ab54c503b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelReq: 3
+  level: 1
+  completionTarget: {fileID: 0}
+--- !u!114 &3197413241237182330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4486108840429486322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21d1bd3218098a4581aaeef8d809acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bodyPart: {fileID: 0}
+  options:
+  - {fileID: -1381999673, guid: 3f56be6804929304497b26b7f561ebda, type: 3}
+  - {fileID: 66345760, guid: 3f56be6804929304497b26b7f561ebda, type: 3}
+  - {fileID: 1006096639, guid: 3f56be6804929304497b26b7f561ebda, type: 3}
+  - {fileID: 1016373859, guid: 3f56be6804929304497b26b7f561ebda, type: 3}
+  - {fileID: 111110685, guid: 3f56be6804929304497b26b7f561ebda, type: 3}

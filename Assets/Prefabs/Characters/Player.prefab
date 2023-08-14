@@ -1231,7 +1231,6 @@ MonoBehaviour:
   maxHealth: 100
   healthBar: {fileID: 0}
   canvasObject: {fileID: 0}
-  playerDead: 0
   isAttacking: 0
 --- !u!114 &9168495761299766546
 MonoBehaviour:

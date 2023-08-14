@@ -17,6 +17,8 @@ namespace Save
         [SerializeField] public float health, maxHealth;
         [SerializeField] public int damageMin, damageMax;
         [SerializeField] public int levelCount;
+        [SerializeField] public int currentOption;
+        [SerializeField] public string currentColor;
         
         void Awake()
         {
@@ -28,6 +30,8 @@ namespace Save
             damageMin = playerSaveObject.playerMinDamage.Value;
             damageMax = playerSaveObject.playerMaxDamage.Value;
             levelCount = generalSaveObject.levelCount.Value;
+            currentOption = playerSaveObject.playerHairIndex.Value;
+            currentColor = playerSaveObject.playerHairColor.Value;
         }
     }
 }

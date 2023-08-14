@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: completionTarget
       value: 
       objectReference: {fileID: 951609099048230108}
+    - target: {fileID: 3197413241237182330, guid: dda0c557e1c78494097c53db1b5e876c, type: 3}
+      propertyPath: bodyPart
+      value: 
+      objectReference: {fileID: 1105948324}
     - target: {fileID: 4486108840429486322, guid: dda0c557e1c78494097c53db1b5e876c, type: 3}
       propertyPath: m_Name
       value: Director
@@ -2674,6 +2678,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
+--- !u!212 &1105948324 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 172793473577613549, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
+  m_PrefabInstance: {fileID: 1105948323}
+  m_PrefabAsset: {fileID: 0}
 --- !u!21 &1149023885
 Material:
   serializedVersion: 8

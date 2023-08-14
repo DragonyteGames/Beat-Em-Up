@@ -74,26 +74,26 @@ public class Enemy : MonoBehaviour
             }
         }
        
-        if(!enemyDead && !isHit)
+        if(!enemyDead && !isHit && !GlobalScript.playerDead)
         {   
             agent.SetDestination(target.position);
             myAnim.SetBool("Walk", true);
 
-            if(agent.remainingDistance > 2.0f && agent.remainingDistance <= 10f)
+            if(agent.remainingDistance > 2f && agent.remainingDistance <= 10f)
             {   
                 myAnim.SetBool("Walk", true);
                 agent.isStopped = false;
-            }else if(agent.remainingDistance <=2.0f){
-                if(transform.position.x >= target.transform.position.x)
+            }else if(agent.remainingDistance <=2f){
+                if(Mathf.Abs(transform.position.x - target.transform.position.x) >= 2f && Mathf.Abs(transform.position.y - target.transform.position.y) > 1f)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x+2.0f, target.transform.position.y), 1f*Time.deltaTime);
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x+2f, target.transform.position.y), 2f*Time.deltaTime);
                     agent.isStopped = false;
                     myAnim.SetBool("Walk", true);
-                }else if(transform.position.x < target.transform.position.x)
+                } else if(Mathf.Abs(transform.position.x - target.transform.position.x) < 2f && Mathf.Abs(transform.position.y - target.transform.position.y) > 1f)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x-2.0f, target.transform.position.y), 1f*Time.deltaTime);
-                    myAnim.SetBool("Walk", true);
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(target.transform.position.x-2f, target.transform.position.y), 2f*Time.deltaTime);
                     agent.isStopped = false;
+                    myAnim.SetBool("Walk", true);                    
                 }
 
                 if(Mathf.Abs(transform.position.y - target.transform.position.y) <= 1f)

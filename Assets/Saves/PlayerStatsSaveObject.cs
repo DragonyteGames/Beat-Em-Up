@@ -10,5 +10,7 @@ namespace Save
         public SaveValue<float> playerMaxHealth = new SaveValue<float>("PlayerMaxHealth");
         public SaveValue<int> playerMinDamage = new SaveValue<int>("PlayerMinDamage");
         public SaveValue<int> playerMaxDamage = new SaveValue<int>("PlayerMaxDamage");
+        public SaveValue<int> playerHairIndex = new SaveValue<int>("PlayerHairIndex");
+        public SaveValue<string> playerHairColor = new SaveValue<string>("PlayerHairColor");
     }
 }

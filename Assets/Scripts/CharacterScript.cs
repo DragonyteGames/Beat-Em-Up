@@ -15,7 +15,6 @@ public class CharacterScript : MonoBehaviour
     [SerializeField] ProgressBar healthBar;
     [SerializeField] GameObject canvasObject; 
     
-    public bool playerDead = false;
     public bool isAttacking = false;
     public static CharacterScript instance;
 
@@ -43,14 +42,14 @@ public class CharacterScript : MonoBehaviour
         //condition to check if health and set if player is is still alive
         if(health > 0)
         {
-            playerDead = false;
+            GlobalScript.playerDead = false;
         }else if (health <= 0)
         {
-            playerDead = true;
+            GlobalScript.playerDead = true;
         }
 
         //actions while the player is still alive
-        if(!playerDead)
+        if(!GlobalScript.playerDead)
         {
             //player movement based on joystick position
             if(joystickController.joystickVec.y != 0)

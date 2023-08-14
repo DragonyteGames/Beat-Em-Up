@@ -26,3 +26,9 @@ MonoBehaviour:
   playerMaxDamage:
     key: PlayerMaxDamage
     value: 20
+  playerHairIndex:
+    key: PlayerHairIndex
+    value: 0
+  playerHairColor:
+    key: PlayerHairColor
+    value: 0

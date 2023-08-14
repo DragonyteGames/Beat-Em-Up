@@ -10,6 +10,7 @@ public class GlobalScript : MonoBehaviour
     static public GameObject[] bloodParticle;
 
     static public int killCount;
+    static public bool playerDead;
 
     public int levelReq;
     public int level;
@@ -30,6 +31,7 @@ public class GlobalScript : MonoBehaviour
     {
         killCount = 0;
         triggerCompletion = false;
+        playerDead = false;
         completionTarget.SetActive(false);
     }
     void FixedUpdate()

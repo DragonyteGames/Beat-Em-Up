@@ -33,8 +33,10 @@ public class ButtonScript : MonoBehaviour
 	}
 
 	//Load the character menu
-    public void LoadCharMenu()
+    public void LoadCharMenu(int sceneIndex)
 	{
+		//SoundMaster.me.BackToMenu();
+		StartCoroutine(MenuRun(sceneIndex));	
     }
 
 	//Quit the application
