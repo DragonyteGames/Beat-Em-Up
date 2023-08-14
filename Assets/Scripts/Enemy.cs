@@ -50,10 +50,10 @@ public class Enemy : MonoBehaviour
     void FixedUpdate(){
 
         //check if health is above zero. Otherwise, enemy is dead.
-        if(health >= 0)
+        if(health > 0)
         {
             enemyDead = false;
-        }else if(health < 0)
+        }else if(health <= 0)
         {
             enemyDead = true;
             myAnim.SetBool("Fainted", true);
@@ -154,6 +154,7 @@ public class Enemy : MonoBehaviour
 
         if(hitBox.gameObject.TryGetComponent<CharacterScript>(out CharacterScript playerComponent) && hitBox.gameObject.tag != "AttackCollider")
         {
+            myPlayer.GetComponent<KnockBack>().PlayKnockBack(this.gameObject);
             playerComponent.TakeDamage(damage);
             SoundMaster.me.PlaySound (Random.Range (0, 2));
             SoundMaster.me.PlaySound (3);

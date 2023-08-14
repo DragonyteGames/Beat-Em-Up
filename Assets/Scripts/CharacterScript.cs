@@ -13,8 +13,9 @@ public class CharacterScript : MonoBehaviour
     [SerializeField] int damageMin, damageMax;
     [SerializeField] float health, maxHealth;
     [SerializeField] ProgressBar healthBar;
-    [SerializeField] GameObject canvasObject;  
-
+    [SerializeField] GameObject canvasObject; 
+    
+    public bool playerDead = false;
     public bool isAttacking = false;
     public static CharacterScript instance;
 
@@ -38,37 +39,50 @@ public class CharacterScript : MonoBehaviour
     }
 
     void Update()
-    {       
-        //player movement based on joystick position
-        if(joystickController.joystickVec.y != 0)
+    {   
+        //condition to check if health and set if player is is still alive
+        if(health > 0)
         {
-            moveDirection = new Vector2(joystickController.joystickVec.x, joystickController.joystickVec.y);
-            moveDirection *= horizontalSpeed * Time.deltaTime;
-            transform.position += transform.TransformDirection(moveDirection);
-        }else
+            playerDead = false;
+        }else if (health <= 0)
         {
-           moveDirection = Vector2.zero; 
+            playerDead = true;
         }
 
-        myAnim.SetFloat("Walk", moveDirection.sqrMagnitude);
-
-        //sets gameObject local scale so that it faces the right direction when moving.
-        if (joystickController.joystickVec.x > 0)
+        //actions while the player is still alive
+        if(!playerDead)
         {
-            transform.localScale = new Vector2(-1, 1);
-        }
-        else if (joystickController.joystickVec.x < 0)
-        {
-            transform.localScale = new Vector2(1, 1);
-        }
-
-        if(Input.GetKeyDown("space"))
-        {
-            if (!isAttacking)
+            //player movement based on joystick position
+            if(joystickController.joystickVec.y != 0)
             {
-                StartCoroutine(HandleIt());                 
+                moveDirection = new Vector2(joystickController.joystickVec.x, joystickController.joystickVec.y);
+                moveDirection *= horizontalSpeed * Time.deltaTime;
+                transform.position += transform.TransformDirection(moveDirection);
+            }else
+            {
+            moveDirection = Vector2.zero; 
             }
-        }          
+
+            myAnim.SetFloat("Walk", moveDirection.sqrMagnitude);
+
+            //sets gameObject local scale so that it faces the right direction when moving.
+            if (joystickController.joystickVec.x > 0)
+            {
+                transform.localScale = new Vector2(-1, 1);
+            }
+            else if (joystickController.joystickVec.x < 0)
+            {
+                transform.localScale = new Vector2(1, 1);
+            }
+
+            if(Input.GetKeyDown("space"))
+            {
+                if (!isAttacking)
+                {
+                    StartCoroutine(HandleIt());                 
+                }
+            }
+        }   
     }
 
     void OnTriggerEnter2D(Collider2D hitBox)
