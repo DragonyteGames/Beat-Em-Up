@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] NavMeshAgent agent;
 
     private bool deathSFXplayed;
+    private bool deathTriggerd;
     
     void Awake()
     {
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        deathTriggerd = false;
     }
 
     void FixedUpdate(){
@@ -65,6 +67,11 @@ public class Enemy : MonoBehaviour
                 deathSFXplayed = true;
             }
             
+            if(!deathTriggerd)
+            {
+                GlobalScript.killCount += 1;
+                deathTriggerd = true;
+            }
         }
        
         if(!enemyDead && !isHit)

@@ -7,28 +7,27 @@ namespace Save
 {
     public class SaveDirector : MonoBehaviour
     {
-        private PlayerStatsSaveObject saveObject;
+        private PlayerStatsSaveObject playerSaveObject;
+        private GeneralSaveObject generalSaveObject;
+
         public static SaveDirector me;
 
         [Header("PlayerStats")] 
         // Start is called before the first frame update
         [SerializeField] public float health, maxHealth;
         [SerializeField] public int damageMin, damageMax;
-        
+        [SerializeField] public int levelCount;
         
         void Awake()
         {
             me = GetComponent<SaveDirector>();
-            Object.DontDestroyOnLoad(this);
-            saveObject = SaveManager.GetSaveObject<PlayerStatsSaveObject>();   
-        }
-
-        void Start()
-        {
-            health = saveObject.playerHealth.Value;
-            maxHealth = saveObject.playerMaxHealth.Value;
-            damageMin = saveObject.playerMinDamage.Value;
-            damageMax = saveObject.playerMaxDamage.Value;
+            playerSaveObject = SaveManager.GetSaveObject<PlayerStatsSaveObject>();
+            generalSaveObject = SaveManager.GetSaveObject<GeneralSaveObject>();
+            health = playerSaveObject.playerHealth.Value;
+            maxHealth = playerSaveObject.playerMaxHealth.Value;
+            damageMin = playerSaveObject.playerMinDamage.Value;
+            damageMax = playerSaveObject.playerMaxDamage.Value;
+            levelCount = generalSaveObject.levelCount.Value;
         }
     }
 }

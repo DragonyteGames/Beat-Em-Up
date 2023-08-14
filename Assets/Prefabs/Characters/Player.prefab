@@ -1231,7 +1231,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   canvasObject: {fileID: 0}
   isAttacking: 0
-  saveManager: {fileID: 0}
 --- !u!210 &4237429832821477879
 SortingGroup:
   m_ObjectHideFlags: 0

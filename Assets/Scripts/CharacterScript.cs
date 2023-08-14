@@ -17,7 +17,6 @@ public class CharacterScript : MonoBehaviour
 
     public bool isAttacking = false;
     public static CharacterScript instance;
-    public SaveDirector saveManager;
 
     float HInput;
     float VInput;
@@ -28,7 +27,6 @@ public class CharacterScript : MonoBehaviour
     {
         instance = this;
         healthBar = canvasObject.GetComponentInChildren<ProgressBar>();
-        GameObject.Find("Save Manager").GetComponent<SaveDirector>();
     }
     void Start()
     {   

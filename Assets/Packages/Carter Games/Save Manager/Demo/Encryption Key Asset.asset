@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae21e57b7f613a45b2a4f86d6799f23, type: 3}
-  m_Name: Save Profiles Container
+  m_Script: {fileID: 11500000, guid: 491aaa4ed61e5904aacc7aeedbbbe6eb, type: 3}
+  m_Name: Encryption Key Asset
   m_EditorClassIdentifier: 
-  profiles:
-  - {fileID: 4900000, guid: d2cbaa01c2eed4f47bbad5af3947fa6d, type: 3}
+  saveEncryptionKey: 
+  keySize: 256

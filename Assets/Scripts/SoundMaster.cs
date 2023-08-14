@@ -21,6 +21,9 @@ public class SoundMaster : MonoBehaviour
 	{
 		me = GetComponent<SoundMaster>();
 		Object.DontDestroyOnLoad(this);
+		mySrc.clip = tracks[0];
+		mySrc.time = menuTrackTime;
+		mySrc.Play();
 	}
 	
 	public void SwitchTracks()
@@ -97,7 +100,7 @@ public class SoundMaster : MonoBehaviour
 			yield return null;
 		}
 
-		mySrc.volume = t = 0;
+		/*mySrc.volume = t = 0;
 		mySrc.clip = tracks[0];
 		mySrc.time = menuTrackTime;
 		mySrc.Play();
@@ -107,7 +110,7 @@ public class SoundMaster : MonoBehaviour
 			mySrc.volume = Mathf.Lerp(0 , maxVolume, t);
 			t += Time.deltaTime;
 			yield return null;
-		}
+		}*/
 		
 	}
 	

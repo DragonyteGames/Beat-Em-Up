@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae21e57b7f613a45b2a4f86d6799f23, type: 3}
-  m_Name: Save Profiles Container
+  m_Script: {fileID: 11500000, guid: 6d074613d4f84bd4691f8fd5d9f17f11, type: 3}
+  m_Name: GeneralSaveObject
   m_EditorClassIdentifier: 
-  profiles:
-  - {fileID: 4900000, guid: d2cbaa01c2eed4f47bbad5af3947fa6d, type: 3}
+  isExpanded: 1
+  saveKey: 48669a80-7eaf-46b2-996c-c5cb2229a420
+  levelCount:
+    key: LevelCount
+    value: 1

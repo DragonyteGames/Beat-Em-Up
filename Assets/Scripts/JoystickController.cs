@@ -23,7 +23,7 @@ public class JoystickController : MonoBehaviour
     public void PointerDown()
     {
         joystick.transform.position = Input.mousePosition;
-        joyStickThreshold.transform.position = Input.mousePosition;
+        //joyStickThreshold.transform.position = Input.mousePosition;
         joystickTouchPos = Input.mousePosition;
     }
 

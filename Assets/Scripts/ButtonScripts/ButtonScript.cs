@@ -17,20 +17,24 @@ public class ButtonScript : MonoBehaviour
     //function to load the desired scene
     public void LoadLevelMenu(int sceneIndex)
 	{
-		StartCoroutine("LevelMenuRun");
-		if(waited)
-		{
-			SoundMaster.me.SwitchTracks();
-			StartCoroutine (LoadAsyncLVMenu(sceneIndex));			
-		}
+		SoundMaster.me.SwitchTracks();
+		StartCoroutine("MenuRun");
+		if(waited)StartCoroutine(LoadAsyncMenu(sceneIndex));			
+    }
 
+    public void LoadMainMenu(int sceneIndex)
+	{
+		SoundMaster.me.BackToMenu();
+		StartCoroutine("MenuRun");
+		if(waited)StartCoroutine(LoadAsyncMenu(sceneIndex));			
     }
 
     //start LoadAsync coroutine, return scene int index
     public void loadLevel (int sceneIndex)
 	{
-		SoundMaster.me.SwitchTracksLevel ();
-		StartCoroutine (LoadAsync(sceneIndex));
+		SoundMaster.me.SwitchTracksLevel();
+		StartCoroutine("MenuRun");
+		if(waited)StartCoroutine(LoadAsync(sceneIndex));
 	}
 
 	//Load the character menu
@@ -68,7 +72,7 @@ public class ButtonScript : MonoBehaviour
 		}
 	}
 
-	IEnumerator LoadAsyncLVMenu(int sceneIndex)
+	IEnumerator LoadAsyncMenu(int sceneIndex)
 	{
 		loadingScreen.SetActive (true);
 		AsyncOperation operation = SceneManager.LoadSceneAsync (sceneIndex);
@@ -83,7 +87,7 @@ public class ButtonScript : MonoBehaviour
 		}
 	}
 
-	IEnumerator LevelMenuRun()
+	IEnumerator MenuRun()
 	{
 		waited = true;
 		yield return new WaitForSeconds(0.5f);

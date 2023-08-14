@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Editor Settings
   m_EditorClassIdentifier: 
   saveEditorTabPos: 0
-  saveEditorProfileCreator: 0
-  saveEditorProfileViewer: 0
+  saveEditorProfileCreator: 1
+  saveEditorProfileViewer: 1
   lastProfileName: 
   showSaveKeys: 0
-  lastSaveObjectName: PlayerStats
-  lastSaveObjectFileName: PlayerStatsSaveObject
+  lastSaveObjectName: General
+  lastSaveObjectFileName: GeneralSaveObject
   justCreatedSaveObject: 0
   backgroundColor: {r: 1, g: 1, b: 1, a: 1}
