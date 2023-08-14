@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d21d1bd3218098a4581aaeef8d809acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bodyPart: {fileID: 0}
+  hairstyle: {fileID: 0}
   options:
   - {fileID: -1381999673, guid: 3f56be6804929304497b26b7f561ebda, type: 3}
   - {fileID: 66345760, guid: 3f56be6804929304497b26b7f561ebda, type: 3}

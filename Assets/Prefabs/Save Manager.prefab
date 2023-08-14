@@ -49,3 +49,5 @@ MonoBehaviour:
   damageMin: 0
   damageMax: 0
   levelCount: 0
+  currentOption: 0
+  currentColor: 

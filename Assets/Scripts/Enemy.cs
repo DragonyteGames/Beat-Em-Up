@@ -17,7 +17,6 @@ public class Enemy : MonoBehaviour
     public float damageMin;
     public float damageMax;
     public GameObject textDamage;
-    public Transform damagePoint;
     public Transform damageTextPos;
     
     [SerializeField] float damage; 

@@ -380,7 +380,7 @@ SpriteRenderer:
   m_Size: {x: 50.006382, y: 15.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &41775670
@@ -464,7 +464,7 @@ SpriteRenderer:
   m_Size: {x: 50.006382, y: 15.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &65731933
@@ -1530,7 +1530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.18305, y: 1.5207299, z: -10}
+  m_LocalPosition: {x: -84.18004, y: 1.6241698, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2181,7 +2181,7 @@ Transform:
   - {fileID: 1108129971}
   - {fileID: 667756335}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &793396061
 GameObject:
@@ -2777,7 +2777,7 @@ SpriteRenderer:
   m_Size: {x: 50.006382, y: 15.92}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &908885156
@@ -3642,7 +3642,7 @@ SpriteRenderer:
   m_Size: {x: 50, y: 11.962891}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1160318533
@@ -4157,53 +4157,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1325665402
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1325665404}
-  - component: {fileID: 1325665403}
-  m_Layer: 0
-  m_Name: Test Hair Change
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1325665403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325665402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 777af7faac697154d8aa80c0963d6b28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myHairstyles:
-  - {fileID: 1877969785}
-  - {fileID: 1989200742}
---- !u!4 &1325665404
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325665402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -67.69382, y: 1.1106077, z: -0.020780575}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1329284961
 GameObject:
   m_ObjectHideFlags: 0
@@ -4316,7 +4269,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1399348361
 GameObject:
@@ -4439,7 +4392,7 @@ Transform:
   - {fileID: 935641050}
   - {fileID: 9071885}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495293009
 GameObject:
@@ -5411,6 +5364,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ad17a88be0fde140a4f2ab54c503b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelReq: 0
+  level: 0
+  completionTarget: {fileID: 0}
 --- !u!4 &1615398419
 Transform:
   m_ObjectHideFlags: 0
@@ -5424,7 +5380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1675317221
 PrefabInstance:
@@ -5577,13 +5533,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677286015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -93.69622, y: 1.53, z: -10}
+  m_LocalPosition: {x: -93.14571, y: 1.6328878, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 956013260}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679099587
 GameObject:
@@ -5989,11 +5945,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1877969785 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7871669544185039279, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
-  m_PrefabInstance: {fileID: 654107172831155907}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1899709306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6238,11 +6189,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1989200742 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2623995739872573473, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
-  m_PrefabInstance: {fileID: 654107172831155907}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2039077820
 GameObject:
   m_ObjectHideFlags: 0

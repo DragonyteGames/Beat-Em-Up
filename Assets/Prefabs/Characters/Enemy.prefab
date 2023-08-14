@@ -226,9 +226,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 79840319747182455}
-  - {fileID: 8042363456728366855}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994302520252343735
 GameObject:
@@ -700,19 +699,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5464915876843410611}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0000005558188, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.012855898, y: 0.019045774, z: 0.019045774}
+  m_LocalScale: {x: 0.012855899, y: 0.019045774, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8398080035532867648}
   - {fileID: 6139900678112604071}
-  m_Father: {fileID: 251566601204674875}
+  m_Father: {fileID: 79840319747182455}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.60854244, y: 2.41}
+  m_AnchoredPosition: {x: -0, y: 4.4799995}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5871642936017985201
@@ -1133,10 +1132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439d9d7e372f66942b9a29e1b93ee914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 4498811766232736126}
-  myParent: {fileID: 8042363456728366855}
-  target: {fileID: 79840319747182455}
-  myType: EnemyHealth
+  slider: {fileID: 0}
+  myParent: {fileID: 0}
+  target: {fileID: 0}
+  myType: 
 --- !u!1 &8094853440429331740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1181,7 @@ Transform:
   - {fileID: 7809201358650036779}
   - {fileID: 8178636404944294842}
   - {fileID: 8967672152396798973}
+  - {fileID: 8042363456728366855}
   m_Father: {fileID: 251566601204674875}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1290,24 +1290,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de2b66a11c2fe3041904e3a525aa62d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAnim: {fileID: 6793439653387706418}
-  speed: 1.5
-  scaleX: 1
-  scaleY: 1
+  myAnim: {fileID: 0}
+  speed: 0
+  scaleX: 0
+  scaleY: 0
   particleHeight: 0
   enemyDead: 0
   isHit: 0
   myPlayer: {fileID: 0}
   damageMin: 0
-  damageMax: 5
-  textDamage: {fileID: 6171542247982005788, guid: 371cc68ebe38da4498943c25a258e91b, type: 3}
-  damagePoint: {fileID: 8398080035532867648}
+  damageMax: 0
+  textDamage: {fileID: 0}
   damageTextPos: {fileID: 0}
-  damage: 10
-  health: 100
-  maxHealth: 100
+  damage: 0
+  health: 0
+  maxHealth: 0
   healthBar: {fileID: 0}
-  canvasObject: {fileID: 5464915876843410611}
+  canvasObject: {fileID: 0}
   target: {fileID: 0}
   agent: {fileID: 0}
 --- !u!195 &7100638338434981382
@@ -1356,8 +1355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66272ef8173e82842aeb897e792ee75b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRender: {fileID: 8458172515931086511}
-  sortingOffsetMarker: {fileID: 8178636404944294842}
+  spriteRender: {fileID: 0}
+  sortingOffsetMarker: {fileID: 0}
 --- !u!1 &8279321460263478519
 GameObject:
   m_ObjectHideFlags: 0

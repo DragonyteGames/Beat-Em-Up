@@ -8,6 +8,7 @@ public class ProgressBar : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private Transform myParent;
     [SerializeField] private Transform target;
+    
     public string myType;
 
     //update the health bar
@@ -16,7 +17,7 @@ public class ProgressBar : MonoBehaviour
         slider.value = currentValue / maxValue;
     }
 
-    void Update()
+    void FixedUpdate()
     {   
         if(myType == "PlayerHealth")
         {
@@ -25,7 +26,7 @@ public class ProgressBar : MonoBehaviour
 
         if(myType == "EnemyHealth")
         {
-            myParent.transform.position = new Vector2 (target.transform.position.x, target.transform.position.y +3f);
+            myParent.transform.position = new Vector2 (target.transform.position.x, target.transform.position.y);
         }
         
     }
