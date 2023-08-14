@@ -19,8 +19,6 @@ public class SoundMaster : MonoBehaviour
 	
 	void Start ()
 	{
-		
-
 		if(me == null)
 		{
 			me = GetComponent<SoundMaster>();
@@ -106,20 +104,7 @@ public class SoundMaster : MonoBehaviour
 			mySrc.volume = Mathf.Lerp(maxVolume, 0 , t);
 			t += Time.deltaTime;
 			yield return null;
-		}
-
-		/*mySrc.volume = t = 0;
-		mySrc.clip = tracks[0];
-		mySrc.time = menuTrackTime;
-		mySrc.Play();
-		
-		while(t < 1)
-		{
-			mySrc.volume = Mathf.Lerp(0 , maxVolume, t);
-			t += Time.deltaTime;
-			yield return null;
-		}*/
-		
+		}	
 	}
 	
 	public void PlaySound(int num)
