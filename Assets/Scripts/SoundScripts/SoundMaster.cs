@@ -21,15 +21,19 @@ public class SoundMaster : MonoBehaviour
 	{
 		if(me == null)
 		{
-			me = GetComponent<SoundMaster>();
-			Object.DontDestroyOnLoad(this);
-		}else{
-			Destroy(this);
+			me = this;
+			Object.DontDestroyOnLoad(gameObject);
+			menuTrackTime = mySrc.time;
+			mySrc.clip = tracks[0];
+			mySrc.Play();
+		}else
+		{
+			menuTrackTime = mySrc.time;
+			mySrc.clip = tracks[0];
+			mySrc.Play();
 		}
 
-		mySrc.clip = tracks[0];
-		mySrc.time = menuTrackTime;
-		mySrc.Play();
+
 	}
 	
 	public void SwitchTracks()

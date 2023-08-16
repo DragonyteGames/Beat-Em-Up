@@ -32,13 +32,6 @@ public class ButtonScript : MonoBehaviour
 		StartCoroutine(LevelRun(sceneIndex));
 	}
 
-	//Load the character menu
-    public void LoadCharMenu(int sceneIndex)
-	{
-		//SoundMaster.me.BackToMenu();
-		StartCoroutine(MenuRun(sceneIndex));	
-    }
-
 	//Quit the application
 	public void AppQuit()
 	{
@@ -49,6 +42,11 @@ public class ButtonScript : MonoBehaviour
 	public void OptionsMenu (string buttonName)
 	{
 		StartCoroutine(OptionRun(buttonName));
+	}
+
+	public void CharMenu(string buttonName)
+	{
+		StartCoroutine(CharMenuRun(buttonName));
 	}
 
 /*----------------------------- IEnumerators--------------------------*/
@@ -116,5 +114,19 @@ public class ButtonScript : MonoBehaviour
 		{
 			uiElements[0].SetActive(false);	
 		}
+	}
+
+	IEnumerator CharMenuRun(string buttonName)
+	{
+		yield return new WaitForSeconds(0.5f);
+		if(buttonName == "CharOptions")
+		{
+			uiElements[1].SetActive(true);
+			uiElements[2].SetActive(false);	
+		}else if(buttonName == "ExitCharOptions")
+		{
+			uiElements[1].SetActive(false);
+			uiElements[2].SetActive(true);	
+		}		
 	}
 }

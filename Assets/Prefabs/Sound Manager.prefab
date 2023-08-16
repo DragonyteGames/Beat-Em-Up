@@ -45,7 +45,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 1.27
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -160,7 +160,7 @@ Transform:
   m_Children:
   - {fileID: 7500896018478266732}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7030120654681715205
 MonoBehaviour:
@@ -177,13 +177,15 @@ MonoBehaviour:
   tracks:
   - {fileID: 8300000, guid: d6e67fd703afa864797999ac2ec8d60d, type: 3}
   - {fileID: 8300000, guid: 2b848b555fa6ce545b93a746f63a89f4, type: 3}
+  - {fileID: 8300000, guid: 224997ccf2620944589c6f00411ce6fa, type: 3}
   sfx:
   - {fileID: 8300000, guid: ad6284f05ca1c1148be9ebddc2b76781, type: 3}
   - {fileID: 8300000, guid: d1e3f8ba0a2e7aa4f8060a2cd772941e, type: 3}
-  - {fileID: 8300000, guid: ad6284f05ca1c1148be9ebddc2b76781, type: 3}
-  - {fileID: 8300000, guid: d1e3f8ba0a2e7aa4f8060a2cd772941e, type: 3}
-  - {fileID: 8300000, guid: 991f9f625e2269d4ba50ff078d65c9f9, type: 3}
+  - {fileID: 8300000, guid: 58b964d5d8c0d7849bd322a2039bd7b8, type: 3}
+  - {fileID: 8300000, guid: 9f9e0ef7355a51546a8f3679f012a577, type: 3}
   - {fileID: 8300000, guid: 3bacec56a9baae84b964a7124830caaa, type: 3}
+  - {fileID: 8300000, guid: 03781c8a4d4d4b1459a09aa49694875b, type: 3}
+  - {fileID: 8300000, guid: b13381a50b5de6c49a63779b4deec624, type: 3}
   mySrc: {fileID: 3563801347791154373}
   sfxSrc: {fileID: 4342200863244117275}
   maxVolume: 10

@@ -39,7 +39,7 @@ public class CharacterChanger : MonoBehaviour
         currentColor = SaveDirector.me.currentColor;        
         hexString = hexText.text;
         bodyPart.sprite = options[currentOption];
-        
+
         if (ColorUtility.TryParseHtmlString(currentColor, out colorValue))
         {
             colorPicker.SetColor(colorValue);
@@ -81,7 +81,6 @@ public class CharacterChanger : MonoBehaviour
 
     public void Confirm()
     {
-        
         if(bodyType == "Hair")playerSaveObject.playerHairIndex.Value = currentOption; 
         if(bodyType == "Eyes")playerSaveObject.playerEyesIndex.Value = currentOption;
         playerSaveObject.playerHairColor.Value = hexString;
