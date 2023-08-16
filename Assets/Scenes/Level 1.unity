@@ -2905,6 +2905,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 422176317938144804, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 422176317938144804, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
     - target: {fileID: 551285940386049024, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
       propertyPath: healthBar
       value: 
@@ -2915,7 +2923,7 @@ PrefabInstance:
       objectReference: {fileID: 2048086009}
     - target: {fileID: 551285940386049024, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
       propertyPath: horizontalSpeed
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 551285940386049024, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
       propertyPath: joystickController
@@ -2967,6 +2975,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6722360301100907800, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428718309120196438, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9168495761299766546, guid: 5c987084707c6164180008bd6ca5e948, type: 3}
