@@ -16,8 +16,13 @@ namespace Save
         // Start is called before the first frame update
         [SerializeField] public float health, maxHealth;
         [SerializeField] public int damageMin, damageMax;
+
+        [Header("Level Index")] 
         [SerializeField] public int levelCount;
-        [SerializeField] public int currentOption;
+
+        [Header("Character costumzation Index")] 
+        [SerializeField] public int currentHairOption;
+        [SerializeField] public int currentEyesOption;
         [SerializeField] public string currentColor;
         
         void Awake()
@@ -30,7 +35,8 @@ namespace Save
             damageMin = playerSaveObject.playerMinDamage.Value;
             damageMax = playerSaveObject.playerMaxDamage.Value;
             levelCount = generalSaveObject.levelCount.Value;
-            currentOption = playerSaveObject.playerHairIndex.Value;
+            currentHairOption = playerSaveObject.playerHairIndex.Value;
+            currentEyesOption = playerSaveObject.playerEyesIndex.Value;
             currentColor = playerSaveObject.playerHairColor.Value;
         }
     }

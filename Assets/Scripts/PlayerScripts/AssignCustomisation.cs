@@ -7,18 +7,26 @@ using Save;
 public class AssignCustomisation : MonoBehaviour
 {   
     [Header("Player Hairstyle")]
-    public SpriteRenderer hairstyle;
+    public SpriteRenderer hairStyle;
+    public SpriteRenderer eyeStyle;
 
     [Header("Hair Options")]
-    public List<Sprite> options = new List<Sprite>();
+    public List<Sprite> hairOptions = new List<Sprite>();
+
+    [Header("Eyes Options")]
+    public List<Sprite> eyesOptions = new List<Sprite>();    
 
     private Color colorValue;
+    private string hexString;
+
     void Start()
-    {
-        hairstyle.sprite = options[SaveDirector.me.currentOption];
-        if( ColorUtility.TryParseHtmlString(SaveDirector.me.currentColor, out colorValue))
+    {   
+        hexString = SaveDirector.me.currentColor;
+        hairStyle.sprite = hairOptions[SaveDirector.me.currentHairOption];
+        eyeStyle.sprite = eyesOptions[SaveDirector.me.currentEyesOption];
+        if(ColorUtility.TryParseHtmlString(hexString, out colorValue))
         {
-            hairstyle.color = colorValue;
+            hairStyle.color = colorValue;
         }
     }
 }

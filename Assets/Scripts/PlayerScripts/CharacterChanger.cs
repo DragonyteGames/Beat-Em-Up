@@ -4,20 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 using Save;
 using CarterGames.Assets.SaveManager;
+using TMPro;
 
 public class CharacterChanger : MonoBehaviour
 {
     [Header("Sprite To Change")]
     public SpriteRenderer bodyPart;
 
+    [Header("Player body type")]
+    public string bodyType;
+
     [Header("Sprites to Cycle Through")]
     public List<Sprite> options = new List<Sprite>();
-    public List<Image> buttons = new List<Image>();
 
     [SerializeField] private int currentOption;
     [SerializeField] private string currentColor;
-    
+    [SerializeField] private string hexString;
+
     public Color colorValue;
+    public FlexibleColorPicker colorPicker;
+    public TMP_InputField hexText;
     private PlayerStatsSaveObject playerSaveObject;
 
     void Awake()
@@ -26,16 +32,29 @@ public class CharacterChanger : MonoBehaviour
     }
 
     void Start()
-    {   
-        currentOption = SaveDirector.me.currentOption;
-        currentColor = SaveDirector.me.currentColor;
+    {  
+        if(bodyType == "Hair")currentOption = SaveDirector.me.currentHairOption;
+        if(bodyType == "Eyes") currentOption = SaveDirector.me.currentEyesOption; 
+
+        currentColor = SaveDirector.me.currentColor;        
+        hexString = hexText.text;
         bodyPart.sprite = options[currentOption];
-        if( ColorUtility.TryParseHtmlString(currentColor, out colorValue))
+        
+        if (ColorUtility.TryParseHtmlString(currentColor, out colorValue))
         {
-            bodyPart.color = colorValue;
+            colorPicker.SetColor(colorValue);
         }
         
     }
+
+    void FixedUpdate()
+    {
+        hexString = hexText.text;
+        if(bodyType == "Hair"){
+            bodyPart.color = colorPicker.color;
+        }
+    }
+
     public void NextOptions()
     {
         currentOption++;
@@ -60,19 +79,11 @@ public class CharacterChanger : MonoBehaviour
         bodyPart.sprite = options[currentOption];
     }
 
-
-    public void GetColor(string colorIndex)
-    {
-        if(ColorUtility.TryParseHtmlString("#"+colorIndex, out colorValue))
-        {
-            currentColor = "#"+colorIndex;
-            bodyPart.color = colorValue;
-        }
-    }
-
     public void Confirm()
     {
-        playerSaveObject.playerHairIndex.Value = currentOption;
-        playerSaveObject.playerHairColor.Value = currentColor;
+        
+        if(bodyType == "Hair")playerSaveObject.playerHairIndex.Value = currentOption; 
+        if(bodyType == "Eyes")playerSaveObject.playerEyesIndex.Value = currentOption;
+        playerSaveObject.playerHairColor.Value = hexString;
     }
 }

@@ -115,6 +115,14 @@ public class CharacterScript : MonoBehaviour
         }
     }
 
+    public void playerAttack()
+    {
+        if (!isAttacking)
+        {
+            StartCoroutine(HandleIt());                 
+        }        
+    }
+
     private IEnumerator HandleIt()
     {  
         // process pre-yield

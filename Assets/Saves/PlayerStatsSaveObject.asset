@@ -31,4 +31,7 @@ MonoBehaviour:
     value: 0
   playerHairColor:
     key: PlayerHairColor
-    value: 
+    value: '#FF0000'
+  playerEyesIndex:
+    key: PlayerEyesIndex
+    value: 0
